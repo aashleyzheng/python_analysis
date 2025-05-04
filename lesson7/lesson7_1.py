@@ -1,5 +1,5 @@
 #參數
-def get_status(bmi:float):
+def get_status(bmi:float)->str:
     if bmi < 18.5:
         status = "體重過輕"
     elif bmi < 24:
@@ -12,7 +12,8 @@ def get_status(bmi:float):
         status = "中度肥胖"
     else:
         status = "重度肥胖"
-    print(f"狀態:{status}")
+    #print(f"狀態:{status}")
+    return status
 
 #自訂function(內建的變數)，主執行區域
 #自訂function，前面一定要有def main()
@@ -26,7 +27,8 @@ def main():
     print(f"身高:{height}""cm")
     print(f"體重:{weight}""kg")
     print(f"BMI:{BMI}")
-    get_status(BMI)
+    status:str = get_status(BMI) #BMI為引數值，真正的值
+    print(f"狀態為:{status}")
     
 
 #專案主要執行檔 => 名字就會叫做main
