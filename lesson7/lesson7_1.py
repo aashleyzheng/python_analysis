@@ -15,6 +15,9 @@ def get_status(bmi:float)->str:
     #print(f"狀態:{status}")
     return status
 
+def get_bmi(w:int, h:int)->float:
+    return round(w/pow(h/100,2),1)    
+
 #自訂function(內建的變數)，主執行區域
 #自訂function，前面一定要有def main()
 #程式由上而下執行不會去執行def main()
@@ -22,7 +25,8 @@ def get_status(bmi:float)->str:
 def main(): 
     height:int = int(input("請輸入身高公分"))
     weight:int = int(input("請輸入體重公斤"))
-    BMI = round(weight/pow(height/100,2),1)
+    #BMI = round(weight/pow(height/100,2),1)
+    BMI:float = get_bmi(weight,height)
 
     print(f"身高:{height}""cm")
     print(f"體重:{weight}""kg")
