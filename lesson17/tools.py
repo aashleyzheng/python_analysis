@@ -5,7 +5,7 @@ def func1(a:int, b:int) -> int:
 
 PI:float = 3.1415926
 
-@dataclass
+@dataclass #Decorator => 註冊dataclass
 class Student:
     name:str
     chinese:int
