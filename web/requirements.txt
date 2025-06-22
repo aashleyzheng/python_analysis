@@ -1,3 +1,6 @@
 requests
 flask
 gunicorn #WXGI Server
+python-dotenv
+google-genai
+line-bot-sdk
